@@ -202,12 +202,12 @@
 						<div class="left_sloginpd"><input name="ssl" checked></div>
 					</div>
 				</form>
-				<div class="left_columidforget"><a href="http://www.mgame.jp/member/idpw_search.html"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>
-				<div class="left_columfreemember"><a href="http://www.mgame.jp/member/step01.html?cp_regid=KNIGHT"><img src="images/btn_register.png" alt="無料会員登録" border="0"></a></div>
-				<div class="left_columdownload"><a href="/info/spec.html"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>
-				<div class="left_columfaq"><a href="/support/faq/index.html"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>
-				<div class="left_columbeginner"><a href="/beginner/index.html"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>
-				<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>
+				<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>
+				<div class="left_columfreemember"><a href="/signup"><img src="images/btn_register.png" alt="無料会員登録" border="0"></a></div>
+				<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>
+				<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>
+				<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>
+				<div class="left_colummainte"><img src="#" alt="メンテナンス"></div>
 				<div class="left_columnbgbut"></div>
 			</div>
 		</div>
@@ -226,12 +226,6 @@
 					</div>
 				</div>
 				<div class="contentsmid">
-
-					<div class="second">
-						<div class="secondpd">
-							<span class="selfin">Registration</span>
-						</div>
-					</div>
 
 					<div class="contentsh2">
 						<div class="contentsh2pd">
@@ -299,11 +293,6 @@
 
 							<div class="bbswidbgbot"></div>
 
-						</div>
-						<div class="second">
-							<div class="secondpd">
-								<span><a href="ladder.html">View All</a></span>
-							</div>
 						</div>
 
 						<div class="clear"></div>

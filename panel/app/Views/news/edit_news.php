@@ -215,7 +215,7 @@
 							</div>
 				</form>
 				<div class="left_columidforget"><a href="#"><img src="../images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>
-				<div class="left_columfreemember"><a href="#"><img src="../images/btn_register.png" alt="無料会員登録" border="0"></a></div>
+				<div class="left_columfreemember"><a href="/signup"><img src="../images/btn_register.png" alt="無料会員登録" border="0"></a></div>
 				<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>
 				<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>
 				<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>
@@ -262,21 +262,21 @@
 										<div>
 										</div>
 										<!-- content starts here -->
-										<table style="margin-top:6em;" width="100%" height="135" border="0" cellpadding="2" cellspacing="2" class="news table">
+										<table style="margin-top:6em;" width="100%" height="0" border="0" cellpadding="2" cellspacing="2" class="news table">
 											<form method="post" id="update_news" name="update_news" action="<?= site_url('/update') ?>">
 												<input type="hidden" name="id" id="id" value="<?php echo $news['id']; ?>">
 												<div class="form-group">
 													<label>Title</label>
-													<input type="text" name="title" class="form-control" value="<?php echo $news['title']; ?>">
+													<input type="text" name="title" style="width: 99%;" class="form-control" value="<?php echo $news['title']; ?>">
 												</div>
 												<div class="form-group">
 													<label>Body</label>
 													<?php
-													echo "<textarea name='body' class='form-control form-control-lg' rows='10' cols='200' style='border-radius:5px; resize: none;'>" . $news['body'] . "</textarea>"; ?>
+													echo "<textarea name='body' style='width: 99%;' class='form-control form-control-lg' rows='10' cols='200' style='border-radius:5px; resize: none;'>" . $news['body'] . "</textarea>"; ?>
 												</div>
 												<br>
 												<div class="form-group">
-													<button type="submit" class="btnpill ">Update</button>
+													<button type="submit" style="padding: 2px; margin-right: 10px; background-color: #c09e66; color: azure; border-radius:5px; float: right;">Update</button>
 												</div>
 											</form>
 										</table>
