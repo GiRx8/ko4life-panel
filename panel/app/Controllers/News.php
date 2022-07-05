@@ -68,7 +68,7 @@ class News extends BaseController
             echo view('news/news_list', $data);
 
         } else {
-            return redirect()->to('/dashboard');
+            return redirect()->to('/');
         }
     }
 
@@ -79,7 +79,7 @@ class News extends BaseController
             $data['news'] = $model->where('id', $id)->first();
             return view('news/edit_news', $data);
         } else {
-            return redirect()->to('/dashboard');
+            return redirect()->to('/');
         }
     }
 
@@ -106,7 +106,7 @@ class News extends BaseController
             $data['news'] = $model->where('id', $id)->delete();
             return redirect()->to('/news-update');
         } else {
-            return redirect()->to('/dashboard');
+            return redirect()->to('/');
         }
     }
 }

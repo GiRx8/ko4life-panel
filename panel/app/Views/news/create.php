@@ -12,8 +12,7 @@
 </head>
 
 <body>
-	<div id="gnb_game_rpg"
-		style="width:100%; height:32px; padding:0; margin:0; overflow:hidden; text-align:left; background-color: #000000;">
+	<div id="gnb_game_rpg" style="width:100%; height:32px; padding:0; margin:0; overflow:hidden; text-align:left; background-color: #000000;">
 		<div style="float:right; width:225px; height:32px; margin:0 10px 0 0; vertical-align:top;">
 			<div style="float:right; width:120px; height:22px; margin:5px 0 0 0;">
 			</div>
@@ -34,7 +33,7 @@
 		</div>
 		<div id="flash">
 			<div class="issue">
-			<ul class="list">
+				<ul class="list">
 					<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
@@ -186,57 +185,59 @@
 			} ?>
 		</div>
 		<!-- navigation ends -->
-		<!-- left column starts -->
+		<!-- left panel starts -->
 		<div id="left_column">
 			<div class="left_columpb">
 				<div class="left_columnbgtop"></div>
-				<form action="http://www.mgame.jp/member/plogin_process.php" method="post" name="login_form">
-					<input type="hidden" name="arr" value>
-					<input type="hidden" name="dest" value="a25pZ2h0Lm1nYW1lLmpwL21lbWJlci9pbmRleC5odG1sLw==">
-					<input type="hidden" name="game" value="KNIGHT">
-					<input type="hidden" name="login_from" value="KNIGHT">
-					<div class="left_columlogin">
-						<div class="left_columloginsz">
-							<?php
-							if (isset($_SESSION['isLoggedIn']) && $_SESSION['role'] == 'admin' | $_SESSION['role'] == 'mod' | $_SESSION['role'] == 'user') {
-								echo '<div class="left_columloginpd"><p size="14" maxlength="15" tabindex="1" style="color: white; margin-top: 5px;">Welcome!</p>';
-								echo '<p style="color: white; margin-top: -15px;">' . session()->get('strAccountID') . '</p>';
-								echo '</div>';
-								echo '</div>';
-								echo '<div class="left_columloginbtn"><a  href= "/logout"><img type="image" src="../images/logout.png" alt="LOGIN" border="0" tabindex="3"></img></a>';
-								echo '</div>';
-								echo '</div>';
-							} else {
-								echo '<div class="left_columloginpd"><input type="email" name="email" placeholder="Email" value="" size="14" maxlength="15" tabindex="1"><input type="password" name="password" placeholder="Password" size="14" maxlength="16" tabindex="2">';
-								echo '</div>';
-								echo '</div>';
-								echo '<div class="left_columloginbtn"><a  href= "/logout"><img type="image" src="../images/logout.png" alt="LOGIN" border="0" tabindex="3"></img></a>';
-								echo '</div>';
-								echo '</div>';
-							}
-							?>
-							<div class="left_slogin">
-								<div class="left_sloginpd"><input name="ssl" checked></div>
-							</div>
-				</form>
-				<div class="left_columidforget"><a href="#"><img
-							src="<?php echo base_url(); ?>/images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a>
-				</div>
-				<div class="left_columfreemember"><a href="/signup"><img
-							src="<?php echo base_url(); ?>/images/btn_register.png" alt="無料会員登録" border="0"></a></div>
-				<div class="left_columdownload"><a href="#"><img
-							src="<?php echo base_url(); ?>/images/btn_download_off.png" alt="ダウンロード" border="0"></a>
-				</div>
-				<div class="left_columfaq"><a href="#"><img
-							src="<?php echo base_url(); ?>/images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>
-				<div class="left_columbeginner"><a href="#"><img
-							src="<?php echo base_url(); ?>/images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>
-				<div class="left_colummainte"><img src="<?php echo base_url(); ?>/images/bg_bar2.png" alt="メンテナンス">
-				</div>
-				<div class="left_columnbgbut"></div>
+				<form action='<?php echo base_url(); ?>/signin/login' method="get" name="login_form">
+					<?php
+					if (isset($_SESSION['isLoggedIn']) && $_SESSION['role'] == 'admin' | $_SESSION['role'] == 'mod' | $_SESSION['role'] == 'user') {
+						echo '<div class="left_columlogout">';
+						echo '<div class="left_columloginsz">';
+						echo '<div class="left_columloginpd"><p size="14" maxlength="15" tabindex="1" style="color: white; margin-top: 5px;">Welcome!</p>';
+						echo '<p style="color: white; margin-top: -15px;">' . session()->get('strAccountID') . '</p>';
+						echo '</div>';
+						echo '</div>';
+						echo '<div class="left_columloginbtn"><a  href= "/logout"><img type="image" src="../images/logout.png" alt="LOGIN" border="0" tabindex="3"></img></a>';
+						echo '</div>';
+						echo '</div>';
+						echo '<div class="left_slogin">';
+						echo '<div class="left_sloginpd"><input name="ssl" checked></div>';
+						echo '</div>';
+						echo '</form>';
+						echo '<div class="left_columidforget"><a href="#"><img src="../images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="#"><img src="../images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="../images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columnbgbut"></div>';
+					} else {
+						echo '<div class="left_columlogin">';
+						echo '<div class="left_columloginsz">';
+						echo '<div class="left_columloginpd"><input type="email" name="email" placeholder="Email" value="" size="14" maxlength="15" tabindex="1"><input type="password" name="password" placeholder="Password" size="14" maxlength="16" tabindex="2">';
+						echo '</div>';
+						echo '</div>';
+						echo '<div class="left_columloginbtn"><input type="image" src="../images/login.png" alt="LOGIN" border="0" tabindex="3">';
+						echo '</div>';
+						echo '</div>';
+						echo '<div class="left_slogin">';
+						echo '<div class="left_sloginpd"><input name="ssl" checked></div>';
+						echo '</div>';
+						echo '</form>';
+						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/signup"><img src="images/bg_register.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columnbgbut"></div>';
+					}
+					?>
+					<!-- left panel navigation ends here-->
 			</div>
 		</div>
-		<!-- left column ends -->		
+		<!-- left column ends -->
 		<!-- START contents_column -->
 		<div id="contents_column">
 			<div class="contenst_columpb">
@@ -284,7 +285,7 @@
 															style="border-radius:5px; background-color: #c09e66; border: none; float: right;" />
 													</div>';
 													} else {
-													echo '<h5>Login if you want to see shit</h5>';
+														echo '<h5>Login if you want to see shit</h5>';
 													}
 													?>
 												</div>
