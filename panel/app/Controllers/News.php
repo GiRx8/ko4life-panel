@@ -20,7 +20,6 @@ class News extends BaseController
 
     public function view($slug = null)
     {
-        if (isset($_SESSION['isLoggedIn']) && $_SESSION['role'] == 'admin') {
         $model = model(NewsModel::class);
 
         $data['news'] = $model->getNews($slug);
@@ -28,13 +27,9 @@ class News extends BaseController
         if (empty($data['news'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Cannot find the news item: ' . $slug);
         }
-
         $data['title'] = $data['news']['title'];
 
         echo view('news/view', $data);
-    } else {
-        return redirect()->to('/');
-    }
     }
 
     public function create()

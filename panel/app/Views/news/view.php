@@ -206,12 +206,12 @@
 						echo '<div class="left_sloginpd"><input name="ssl" checked></div>';
 						echo '</div>';
 						echo '</form>';
-						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
-						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="#"><img src="images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
-						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
-						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
-						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
-						echo '<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columidforget"><a href="#"><img src="../images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/profile"><img src="../images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="../images/bg_bar2.png" alt="メンテナンス"></div>';
 						echo '<div class="left_columnbgbut"></div>';
 					} else {
 						echo '<div class="left_columlogin">';
@@ -219,19 +219,19 @@
 						echo '<div class="left_columloginpd"><input type="email" name="email" placeholder="Email" value="" size="14" maxlength="15" tabindex="1"><input type="password" name="password" placeholder="Password" size="14" maxlength="16" tabindex="2">';
 						echo '</div>';
 						echo '</div>';
-						echo '<div class="left_columloginbtn"><input type="image" src="images/login.png" alt="LOGIN" border="0" tabindex="3">';
+						echo '<div class="left_columloginbtn"><input type="image" src="../images/login.png" alt="LOGIN" border="0" tabindex="3">';
 						echo '</div>';
 						echo '</div>';
 						echo '<div class="left_slogin">';
 						echo '<div class="left_sloginpd"><input name="ssl" checked></div>';
 						echo '</div>';
 						echo '</form>';
-						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
-						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/signup"><img src="images/bg_register.png" alt="無料会員登録" border="0"></a></div>';
-						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
-						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
-						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
-						echo '<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columidforget"><a href="#"><img src="../images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/signup"><img src="../images/bg_register.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="../images/bg_bar2.png" alt="メンテナンス"></div>';
 						echo '<div class="left_columnbgbut"></div>';
 					}
 					?>

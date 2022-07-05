@@ -50,12 +50,17 @@ class Signin extends Controller
             return redirect()->to('/');
         }
     }
-    
+
     public function updatepassword()
     {
+        if (isset($_SESSION['isLoggedIn']) == true) {
         helper(['form']);
         $data = [];
         echo view('/templates/change_password', $data);
+        
+        } else {
+            return redirect()->to('/');
+        }
     }
 
     public function changepassword()
@@ -69,10 +74,10 @@ class Signin extends Controller
         $confirmpassword = $this->request->getVar('confirmpassword');
         $data = $userModel->find($id);
         $pass = $data['strPasswd'];
-        $authenticatePassword = password_verify($password, $pass);
+        $authenticatePassword = $password == $pass;
         if ($authenticatePassword) {
             if ($newpassword == $confirmpassword) {
-                $newpass = password_hash($newpassword, PASSWORD_DEFAULT);
+                $newpass = $newpassword;
                 $userModel->update($id, [
                     'strPasswd' => $newpass,
                 ]);
@@ -80,11 +85,11 @@ class Signin extends Controller
                 return redirect()->to('/logout');
             } else {
                 $session->setFlashdata('msg', 'Password not match.');
-                return redirect()->to('/pass');
+                return redirect()->to('/password-reset');
             }
         } else {
             $session->setFlashdata('msg', 'Password is incorrect.');
-            return redirect()->to('/pass');
+            return redirect()->to('/password-reset');
         }
     }
     public function logout()

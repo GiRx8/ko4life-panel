@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" media="screen,print" href="css/style_2.css">
 </head>
 
+
 <body>
 	<div id="gnb_game_rpg" style="width:100%; height:32px; padding:0; margin:0; overflow:hidden; text-align:left; background-color: #000000;">
 		<div style="float:right; width:225px; height:32px; margin:0 10px 0 0; vertical-align:top;">
@@ -31,8 +32,29 @@
 			<div style="position:absolute;top:-2000px;">
 			</div>
 		</div>
-		<!--- news navigation starts here --->
-		<?php
+		<div id="flash">
+			<div class="issue">
+				<ul class="list">
+					<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/visual5.jpg" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/visual2.jpg" class="d-block w-100" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="images/visual3.jpg" class="d-block w-100" alt="...">
+							</div>
+						</div>
+					</div>
+				</ul>
+				<div class="skin">
+					<div></div>
+				</div>
+			</div>
+			<!--- news navigation starts here --->
+			<?php
 			if (isset($_SESSION['isLoggedIn']) && $_SESSION['role'] == 'admin' | $_SESSION['role'] == 'mod') {
 
 				echo '<ul class="gnb">
@@ -163,6 +185,7 @@
 			</ul>';
 			} ?>
 		</div>
+		<!-- navigation ends -->
 		<!-- left panel starts -->
 		<div id="left_column">
 			<div class="left_columpb">
@@ -183,12 +206,12 @@
 						echo '<div class="left_sloginpd"><input name="ssl" checked></div>';
 						echo '</div>';
 						echo '</form>';
-						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
-						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/profile"><img src="images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
-						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
-						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
-						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
-						echo '<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columidforget"><a href="#"><img src="../images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/profile"><img src="../images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="../images/bg_bar2.png" alt="メンテナンス"></div>';
 						echo '<div class="left_columnbgbut"></div>';
 					} else {
 						echo '<div class="left_columlogin">';
@@ -196,7 +219,7 @@
 						echo '<div class="left_columloginpd"><input type="email" name="email" placeholder="Email" value="" size="14" maxlength="15" tabindex="1"><input type="password" name="password" placeholder="Password" size="14" maxlength="16" tabindex="2">';
 						echo '</div>';
 						echo '</div>';
-						echo '<div class="left_columloginbtn"><input type="image" src="images/login.png" alt="LOGIN" border="0" tabindex="3">';
+						echo '<div class="left_columloginbtn"><input type="image" src="../images/login.png" alt="LOGIN" border="0" tabindex="3">';
 						echo '</div>';
 						echo '</div>';
 						echo '<div class="left_slogin">';
@@ -204,196 +227,104 @@
 						echo '</div>';
 						echo '</form>';
 						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
-						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/signup"><img src="images/bg_register.png" alt="無料会員登録" border="0"></a></div>';
-						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
-						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
-						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
-						echo '<div class="left_colummainte"><img src="images/bg_bar2.png" alt="メンテナンス"></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/signup"><img src="../images/bg_register.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columdownload"><a href="#"><img src="../images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
+						echo '<div class="left_columfaq"><a href="#"><img src="../images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
+						echo '<div class="left_columbeginner"><a href="#"><img src="../images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
+						echo '<div class="left_colummainte"><img src="../images/bg_bar2.png" alt="メンテナンス"></div>';
 						echo '<div class="left_columnbgbut"></div>';
 					}
 					?>
 					<!-- left panel navigation ends here-->
 			</div>
 		</div>
-		<div id="center_column">
-			<!-- start news -->
-			<div class="center_columnbgtop">
-				<div xmlns:php="http://php.net/xsl" class="center_news">
-					<div class="center_newspd">
-						<?php if (!empty($news) && is_array($news)) : ?>
-							<?php
-							$i = 0;
-							foreach ($news as $news_item) :
-								if ($i++ > 5) break; ?>
-								<div class="clear"></div>
-								<div class="cl00">
-									<div class="cl03"><img src="<?php echo base_url(); ?>/images/news.png"></div>
-									<div class="newslistmg"></div>
-									<div class="cl01"><a href="/news/<?=esc($news_item['slug'], 'url')?>""><?= esc($news_item['title']) ?></a>
-									</div>
-									<div class="newslistmg"></div>
-									<div class="cl02"><?= date('Y-m-d', strtotime($news_item['created_at'])) ?>
-									</div>
-									<div class="newslistmg"></div>
-								</div>
-							<?php endforeach ?>
-
-						<?php else : ?>
-
-							<h3>No News</h3>
-
-							<p>Unable to find any news for you.</p>
-
-						<?php endif ?>
-						<div class="cl00">
+		<!--content navigation starts here -->
+		<div id="contents_column">
+			<div class="contenst_columpb">
+				<div class="contentstop">
+					<div class="contentstoppd">
+						<h1><img border="0" src="images/h1_03community.gif" alt="コミュニティ"></h1>
+						<div class="pankz">
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- news ends -->
-			<div>
-				<!-- user rank starts -->
-				<div class="center_columnbgtoprrank" style="margin-top:-13.5em;">
-					<div style="padding: 20px;">
-						<table class="table">
-							<tr style="border: gray;">
-								<th scope="col" style="color:azure; font-weight: bold;">Rank</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Prestige</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Name</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Loyalty</th>
-							</tr>
-							<tr style="color: azure;">
-								<th scope="row" style="border: 0; color: azure;">1</th>
-								<td style="border: 0; color: azure;">{Symbol}</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">2</th>
-								<td style="border: 0; color: azure;">{Symbol}</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">3</th>
-								<td style="border: 0; color: azure;">{Symbol}</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">4</th>
-								<td style="border: 0; color: azure;">{Symbol}</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">5</th>
-								<td style="border: 0; color: azure;">{Symbol}</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-						</table>
+				<div class="contentsmid">
+					<div class="second">
+						<div class="secondpd">
+						</div>
+					</div>
+					<!-- navigation ends here -->
+					<div class="contentsh2">
+						<div class="contentsh2pd">
+							<h2 style="margin-top: .43em; margin-left: 40%;">Password Reset</h2>
+						</div>
+					</div>
+					<div class="contentsmain">
+						<div class="bbsmargin">
+							<div class="clear"></div>
+							<h2 style="margin-top: .43em; margin-left: 40%;"></h2>
+							<div class="bbswidbgtop"></div>
+							<div class="bbswidbgmid">
+								<div class="bbsbbswidbgpd">
+									<div style="padding: 1px;">
+										<div>
+										</div>
+										<!-- content starts here -->
+										<div style="margin-left: 40%; margin-top: 0px">
+											<?php
+											echo 'ID: ' . session()->get('strAccountID');
+											echo '<br>';
+											echo 'Email: ' . session()->get('email');
+											echo '<br>';
+											echo 'Pin: ' . session()->get('pin');
+											echo '<br>';
+											echo "<p>Password: <a class='' style= 'color: black;' href='/password-reset'/> Change Password</a></p>";
+											?>
+										</div>
+										<!-- content ends here -->
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="bbswidbgbot">
+							</div>
+						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
-				<!-- user rank ends -->
-				<!-- guild rank starts -->
-				<div class="center_columnbgtopgrank" style="margin-top:-10em;">
-					<div style="padding: 20px;">
-						<table class="table">
-							<tr style="border: gray;">
-								<th scope="col" style="color:azure; font-weight: bold;">Rank</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Guild</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Leader</th>
-								<th scope="col" style="color:azure; font-weight: bold;">Contribution</th>
-							</tr>
-							<tr style="color: azure;">
-								<th scope="row" style="border: 0; color: azure;">1</th>
-								<td style="border: 0; color: azure;">Noob</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">2</th>
-								<td style="border: 0; color: azure;">Noob</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">3</th>
-								<td style="border: 0; color: azure;">Noob</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">4</th>
-								<td style="border: 0; color: azure;">Noob</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-							<tr>
-								<th scope="row" style="border: 0; color: azure;">5</th>
-								<td style="border: 0; color: azure;">Noob</td>
-								<td style="border: 0; color: azure;">GiR</td>
-								<td style="border: 0; color: azure;">12345678</td>
-							</tr>
-						</table>
-					</div>
-				</div>
+				<div class="contentsbut"></div>
 			</div>
 		</div>
-		<!-- guild rank ends -->
-		<!-- start right column -->
-		<div id="right_column">
-			<div class="right_columnbgtop2">
-				<div class="right_battlflh">
-					<ul class="list">
-						<li><img src="<?php echo base_url(); ?>/images/img_banner1.jpg" alt></li>
-						<li><img src="<?php echo base_url(); ?>/images/img_banner2.jpg" alt></li>
-						<li><img src="<?php echo base_url(); ?>/images/img_banner3.jpg" alt></li>
-						<li><img src="<?php echo base_url(); ?>/images/img_banner4.jpg" alt></li>
-						<li><img src="<?php echo base_url(); ?>/images/img_banner5.jpg" alt></li>
-					</ul>
-				</div>
-				<div class="right_powerupshoppd">
-					<a href="http://knight.mgame.jp/guide/beginner/first.html"><img src="<?php echo base_url(); ?>/images/btn_event_2.png" alt="初めから学ばナイト！" border="0"></a>
-					<a href="http://knight.mgame.jp/entertainment/cartoon_list.html"><img src="<?php echo base_url(); ?>/images/btn_event.png" alt="斉藤かよ子先生の４コマ漫画" border="0"></a>
-				</div>
-				<div class="right_bannersz">
-					<a href="/powerupshop/kp_buy.html"><img src="<?php echo base_url(); ?>/images/btn_recruit.png" alt="コミュニティ" border="0"></a>
-					<a href="/guide/beginner/"><img src="<?php echo base_url(); ?>/images/btn_system.png" alt="ゲームシステム" border="0"></a>
-				</div>
-			</div>
-		</div>
-		<!-- end right column -->
-		<!-- footer start -->
+		<!-- footer starts here -->
 		<div id="footer">
 			<div class="footerpd">
 				<div class="footerbg">
 					<div class="footerlinkpd">
-						<span><a href="http://www.mgame.jp/policy/kiyaku.html" target="_blank">T.O.S</a></span>
-						<span><a href="http://www.mgame.jp/policy/privacy_policy.html" target="_blank">Policy</a></span>
-						<span><a href="http://corp.mgame.jp/recruit/">Team</a></span>
+						<span><a href="#" target="_blank">T.O.S</a></span>
+						<span><a href="#" target="_blank">Policy</a></span>
+						<span><a href="#">Team</a></span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- footer ends -->
+		<!-- footer ends here -->
 		<!-- Javascript start-->
-		<script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
-		<script type="text/javascript" src="js/img_changer_auto.js"></script>
-		<script type="text/javascript" src="js/mjscript.js"></script>
-		<script type="text/javascript" src="js/login.js"></script>
-		<script type="text/javascript" src="js/commXMLHttp.js"></script>
-		<script type="text/javascript" src="js/windowEvent.js"></script>
-		<script type="text/javascript" src="js/makePCookie.js"></script>
-		<script type="text/javascript" src="js/menu.js"></script>
-		<script type="text/javascript" src="js/jquery-latest.js"></script>
-		<script type="text/javascript" src="js/gnb.js"></script>
-		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
-		<script type="text/javascript" src="js/misc.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/AC_RunActiveContent.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/img_changer_auto.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/mjscript.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/login.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/commXMLHttp.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/windowEvent.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/makePCookie.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/menu.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/jquery-latest.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/gnb.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>/js/misc.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-		<script charset="utf-8" src="js/ga.js" type="text/javascript"></script>
+		<script charset="utf-8" src="<?php echo base_url(); ?>/js/ga.js" type="text/javascript"></script>
+		<!-- Javascript ends -->
 	</div>
 
 </body>

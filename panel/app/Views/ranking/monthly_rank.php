@@ -207,7 +207,7 @@
 						echo '</div>';
 						echo '</form>';
 						echo '<div class="left_columidforget"><a href="#"><img src="images/forgotten_password.png" alt="ID：パスワードを忘れた方はこちら"></a></div>';
-						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="#"><img src="images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
+						echo '<div class="left_columfreemember" style="margin-bottom: -12px;"><a href="/profile"><img src="images/bg_acc.png" alt="無料会員登録" border="0"></a></div>';
 						echo '<div class="left_columdownload"><a href="#"><img src="images/btn_download_off.png" alt="ダウンロード" border="0"></a></div>';
 						echo '<div class="left_columfaq"><a href="#"><img src="images/btn_faq_off.jpg" alt="FAQ" border="0"></a></div>';
 						echo '<div class="left_columbeginner"><a href="#"><img src="images/bg_bar1.png" alt="初めての方はこちら" border="0"></a></div>';
